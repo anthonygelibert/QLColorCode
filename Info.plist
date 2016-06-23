@@ -21,6 +21,7 @@
 				<string>com.sun.java-class</string>
 				<string>org.vim.vim-script</string>
 				<string>public.tex</string>
+				<string>public.json</string>
 			</array>
 		</dict>
 	</array>
