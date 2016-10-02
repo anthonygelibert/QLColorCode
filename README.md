@@ -7,7 +7,7 @@
 This is a Quick Look plugin that renders source code with syntax highlighting,
 using the [Highlight library](http://www.andre-simon.de).
 
-To install the plugin, just drag it to `/Library/QuickLook`.
+To install the plugin, just drag it to `~/Library/QuickLook`.
 You may need to create that folder if it doesn't already exist.
 
 ## Settings
