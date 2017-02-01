@@ -122,3 +122,47 @@ desktop then back to its installed location should do the trick.
 As an aside, by changing colorize.sh you can use this plugin to render any file
 type that you can convert to HTML. Have fun, and let me know if you do anything
 cool!
+
+### Adding Language Types
+
+If QLColorCode doesn't display PHP and JavaScript code properly, their types may
+need to be added to Info.plist.  Finding the right type string to use is the 
+tricky part.  Getting the type strings and getting Info.plist edits to take effect
+is easy by following the following steps showing how to add support for PHP:
+
+0. In Terminal.app (or any shell prompt), enter the command:
+  
+  ``` bash
+  mdls -name kMDItemContentType /full/path/to/file.php
+  ```
+  
+  Use the path to any PHP file.  The response will be:
+  
+  ``` txt
+  kMDItemContentType = "public.php-script"
+  ```
+  
+  The string `public.php-script` is the type string needed in a later step.
+  
+0. Again at a shell prompt, enter the command:
+  
+  ``` bash
+  open ~/Library/QuickLook/QLColorCode.qlgenerator/Contents/Info.plist
+  ```
+  
+  This will open Info.plist in Xcode.app.
+  
+0. In Xcode.app's edit window for Info.plist, go to: 
+  
+  Document types > Item 0 > Document Content Type UTIs
+  
+  (If the editor is showing raw keys, that's:
+  CFBundleDocumentTypes > Item 0 > LSItemContentTypes)
+
+0. Add an item for `public.php-script`, the type string found in the first step.
+
+0. Save the updated Info.plist file.
+
+0. Try it in Finder.  (It's usually unnecessary to move/return the qlgenerator
+  extension, restart QuickLook, or restart the Finder, but it wouldn't be surprising
+  that some users might need to do so.)
