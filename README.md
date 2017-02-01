@@ -123,12 +123,12 @@ As an aside, by changing colorize.sh you can use this plugin to render any file
 type that you can convert to HTML. Have fun, and let me know if you do anything
 cool!
 
-### Adding Language Types
+##### Adding Language Types
 
 If QLColorCode doesn't display PHP and JavaScript code properly, their types may
 need to be added to Info.plist.  Finding the right type string to use is the 
 tricky part.  Getting the type strings and getting Info.plist edits to take effect
-is easy by following the following steps showing how to add support for PHP:
+is easy by following the steps below, which explain how to add support for PHP:
 
 0. In Terminal.app (or any shell prompt), enter the command:
   
@@ -163,6 +163,11 @@ is easy by following the following steps showing how to add support for PHP:
 
 0. Save the updated Info.plist file.
 
-0. Try it in Finder.  (It's usually unnecessary to move/return the qlgenerator
+0. Try it in Finder.  (It's usually unnecessary to move/return the QLColorCode
   extension, restart QuickLook, or restart the Finder, but it wouldn't be surprising
   that some users might need to do so.)
+
+The Info.plist included with this version of QLColorCode already contains types
+for PHP and JavaScript code, but these steps show how easy it is to add other
+types.  (Maybe somebody will develop a Preference Pane for QLColorCode to make
+this even easier.)
