@@ -12,6 +12,8 @@
 			<key>LSItemContentTypes</key>
 			<array>
 				<string>public.source-code</string>
+				<string>public.php-script</string>
+				<string>com.netscape.javascript-source</string>
 				<string>public.css</string>
 				<string>com.apple.applescript.script</string>
 				<string>public.xml</string>
