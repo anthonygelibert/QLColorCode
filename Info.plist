@@ -27,6 +27,7 @@
 				<string>public.tex</string>
 				<string>public.text</string>
 				<string>public.json</string>
+				<string>dyn.ah62d4rv4ge81g6pq</string>
 			</array>
 		</dict>
 	</array>
@@ -261,6 +262,7 @@
 			<key>UTTypeConformsTo</key>
 			<array>
 				<string>public.source-code</string>
+				<string>dyn.ah62d4rv4ge81g6pq</string>
 			</array>
 			<key>UTTypeDescription</key>
 			<string>SQL Source File</string>
