@@ -126,7 +126,7 @@ go4it () {
     cmdOpts=(${plugin} --plug-in outhtml_codefold --syntax=${lang} --quiet --include-style --font=${font} --font-size=${fontSizePoints} --style=${hlTheme} --encoding=${textEncoding} ${=extraHLFlags} --validate-input)
 
     debug "Generating the preview"
-    if [ ${thumb} = "1" ]; then
+    if [ "${thumb}" = "1" ]; then
         ${reader} | head -n 100 | head -c 20000 | ${cmd} ${cmdOpts} && exit 0
     elif [ -n "${maxFileSize}" ]; then
         ${reader} | head -c ${maxFileSize} | ${cmd} -T "${target}" ${cmdOpts} && exit 0
