@@ -80,6 +80,12 @@ Here are some useful 'highlight' command-line flags (from the man page):
 
     defaults write org.n8gray.QLColorCode pathHL /path/to/your/highlight
 
+It is also possible to have the HTML preview converted to RTF.  Using RTF
+allows the contents of the file to be displayed instead of an icon -- similar
+to QLStephen.
+
+    defaults write org.n8gray.QLColorCode rtfRender true
+
 ## Additional information
 
 ### Additional features

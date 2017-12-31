@@ -5,6 +5,7 @@
 #import <CoreServices/CoreServices.h>
 #import <Foundation/Foundation.h>
 #import <QuickLook/QuickLook.h>
+#import <AppKit/AppKit.h>
 #import "Common.h"
 
 
@@ -34,6 +35,19 @@ OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview,
     n8log(@"Generated preview html page in %.3f sec",
           -[startDate timeIntervalSinceNow] );
 
+    NSData *rtf = nil;
+    NSUserDefaults *defaults = [[NSUserDefaults alloc] initWithSuiteName:myDomain];
+    BOOL use_rtf = [defaults boolForKey:@"rtfPreview"];
+    [defaults release];
+
+    if (use_rtf) {
+        NSDictionary *attrs;
+        NSAttributedString *string = [[NSAttributedString alloc] initWithHTML:output documentAttributes:&attrs];
+        NSRange range = NSMakeRange(0, [string length]);
+        rtf = [string RTFFromRange:range documentAttributes:attrs];
+        [string release];
+    }
+
     if (status != 0 || QLPreviewRequestIsCancelled(preview)) {
 #ifndef DEBUG
         goto done;
@@ -47,10 +61,11 @@ OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview,
     CFDictionaryRef properties =
             (CFDictionaryRef)[NSDictionary dictionaryWithObject:textEncoding
                                                          forKey:(NSString *)kQLPreviewPropertyTextEncodingNameKey];
-    QLPreviewRequestSetDataRepresentation(preview, (CFDataRef)output,
-                                          //kUTTypePlainText,
-                                          kUTTypeHTML,
-                                          properties);
+
+    if (use_rtf)
+        QLPreviewRequestSetDataRepresentation(preview, (CFDataRef)rtf, kUTTypeRTF, properties);
+    else
+        QLPreviewRequestSetDataRepresentation(preview, (CFDataRef)output, kUTTypeHTML, properties);
 
 #ifndef DEBUG
 done:
