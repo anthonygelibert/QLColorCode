@@ -4,7 +4,7 @@
  *
  *  Created by Nathaniel Gray on 12/6/07.
  *  Copyright 2007 Nathaniel Gray.
- *  
+ *
  *  Modified by Anthony Gelibert on 9/5/12.
  *  Copyright 2012 Anthony Gelibert.
  */
@@ -23,28 +23,28 @@ NSData *runTask(NSString *script, NSDictionary *env, int *exitCode) {
     [task setEnvironment:env];
     [task setLaunchPath:@"/bin/sh"];
     [task setArguments:[NSArray arrayWithObjects:@"-c", script, nil]];
-    
+
     NSPipe *pipe;
     pipe = [NSPipe pipe];
     [task setStandardOutput: pipe];
     // Let stderr go to the usual place
     //[task setStandardError: pipe];
-    
+
     NSFileHandle *file;
     file = [pipe fileHandleForReading];
-    
+
     [task launch];
-    
+
     NSData *data;
     data = [file readDataToEndOfFile];
     [task waitUntilExit];
-    
+
     *exitCode = [task terminationStatus];
     [task release];
     /* The docs claim this isn't needed, but we leak descriptors otherwise */
     [file closeFile];
     /*[pipe release];*/
-    
+
     return data;
 }
 
@@ -66,17 +66,17 @@ NSData *colorizeURL(CFBundleRef bundle, CFURLRef url, int *status, int thumbnail
     n8log(@"url = %@", url);
     NSString *targetEsc = pathOfURL(url);
     n8log(@"targetEsc = %@", targetEsc);
-    
+
     // Set up preferences
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
+
     NSMutableDictionary *env = [NSMutableDictionary dictionaryWithDictionary:
                                 [[NSProcessInfo processInfo] environment]];
 
     NSString *path = [env objectForKey: @"PATH"];
     NSString *newPath = [path stringByAppendingString: @":/usr/local/bin:/usr/local/sbin"];
     [env setObject: newPath forKey: @"PATH"];
-    
+
     // Try to find highlight location
     NSString *highlightPath = [[defaults persistentDomainForName:myDomain] valueForKey:@"pathHL"];
     if (highlightPath == nil) {
@@ -91,7 +91,7 @@ NSData *colorizeURL(CFBundleRef bundle, CFURLRef url, int *status, int thumbnail
         }
         [userDefaults release];
     }
-    
+
     [env addEntriesFromDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
 #ifdef DEBUG
                                    @"1", @"qlcc_debug",
@@ -99,15 +99,15 @@ NSData *colorizeURL(CFBundleRef bundle, CFURLRef url, int *status, int thumbnail
                                    @"10", @"fontSizePoints",
                                    @"Menlo", @"font",
                                    @"edit-xcode", @"hlTheme",
-//                                   @"-lz -j 3 -t 4 --kw-case=capitalize ", @"extraHLFlags", 
-                                   @"-t 4 --kw-case=capitalize ", @"extraHLFlags", 
+//                                   @"-lz -j 3 -t 4 --kw-case=capitalize ", @"extraHLFlags",
+                                   @"-t 4 --kw-case=capitalize ", @"extraHLFlags",
                                    @"/opt/local/bin/highlight", @"pathHL",
                                    @"", @"maxFileSize",
-                                   @"UTF-8", @"textEncoding", 
+                                   @"UTF-8", @"textEncoding",
                                    @"UTF-8", @"webkitTextEncoding", nil]];
 
     [env addEntriesFromDictionary:[defaults persistentDomainForName:myDomain]];
-    
+
     // This overrides hlTheme if hlThumbTheme is set and we're generating a thumbnail
     // (This way we won't irritate people with existing installs)
     // Admittedly, it's a little shady, overriding the set value, but I'd rather complicate the compiled code
@@ -119,10 +119,10 @@ NSData *colorizeURL(CFBundleRef bundle, CFURLRef url, int *status, int thumbnail
                      @"'%@/colorize.sh' '%@' '%@' %s",
                      rsrcEsc, rsrcEsc, [targetEsc stringByReplacingOccurrencesOfString:@"'" withString:@"'\\''"], thumbnail ? "1" : "0"];
     n8log(@"cmd = %@", cmd);
-    
+
     output = runTask(cmd, env, status);
     if (*status != 0) {
-        NSLog(@"QLColorCode: colorize.sh failed with exit code %d.  Command was (%@).", 
+        NSLog(@"QLColorCode: colorize.sh failed with exit code %d.  Command was (%@).",
               *status, cmd);
     }
     return output;
