@@ -28,6 +28,7 @@
 				<string>public.text</string>
 				<string>public.json</string>
 				<string>dyn.ah62d4rv4ge81g6pq</string>
+				<string>dyn.ah62d4rv4ge8007a</string>
 			</array>
 		</dict>
 	</array>
@@ -1040,6 +1041,23 @@
 					<string>ld</string>
 					<string>map</string>
 					<string>d</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>dyn.ah62d4rv4ge8007a</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>Kotlin Source File</string>
+			<key>UTTypeIdentifier</key>
+			<string>org.kotlinlang.source</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>kt</string>
 				</array>
 			</dict>
 		</dict>
