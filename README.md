@@ -4,21 +4,21 @@
 
 **Original project:** <http://code.google.com/p/qlcolorcode/>
 
-This is a Quick Look plugin that renders source code with syntax highlighting,
+This is a Quick Look plug-in that renders source code with syntax highlighting,
 using the [Highlight library](http://www.andre-simon.de).
 
-To install Highlight, [download the library manualy](http://www.andre-simon.de/zip/download.php), or use homebrew `brew install highlight`
+To install Highlight, [download the library manually](http://www.andre-simon.de/zip/download.php), or use Homebrew `brew install highlight`
 
-To install the plugin, just drag it to `~/Library/QuickLook`.
+To install the plug-in, just drag it to `~/Library/QuickLook`.
 You may need to create that folder if it doesn't already exist.
 
-Alternative, if you use [Homebrew-Cask](https://github.com/caskroom/homebrew-cask),
+Alternative, if you use [Homebrew Cask](https://github.com/caskroom/homebrew-cask),
 install with `brew cask install qlcolorcode`.
 
 ## Settings
 If you want to configure `QLColorCode`, there are several `defaults` commands that could be useful:
 
-Setting the text encoding (default is `UTF-8`).  Two settings are required.  The first sets Highlight's encoding, the second sets Webkit's:
+Setting the text encoding (default is `UTF-8`). Two settings are required. The first sets Highlight's encoding, the second sets Webkit's:
 
     defaults write org.n8gray.QLColorCode textEncoding UTF-16
     defaults write org.n8gray.QLColorCode webkitTextEncoding UTF-16
@@ -78,11 +78,11 @@ Here are some useful 'highlight' command-line flags (from the man page):
        --kw-case=<upper|lower|capitalize>
               control case of case insensitive keywords
 
-**Warning:** my fork uses an external `Highlight`. It will attempt to find `highlight` on your `PATH` (so it should work out of the box for homebrew and MacPorts), but if it can't find it, it'll use `/opt/local/bin/highlight` (MacPorts default). This can be changed:
+**Warning:** my fork uses an external `Highlight`. It will attempt to find `highlight` on your `PATH` (so it should work out of the box for Homebrew and MacPorts), but if it can't find it, it'll use `/opt/local/bin/highlight` (MacPorts default). This can be changed:
 
     defaults write org.n8gray.QLColorCode pathHL /path/to/your/highlight
 
-It is also possible to have the HTML preview converted to RTF.  Using RTF
+It is also possible to have the HTML preview converted to RTF. Using RTF
 allows the contents of the file to be displayed instead of an icon -- similar
 to QLStephen.
 
@@ -102,9 +102,9 @@ QLColorCode decompiles some formats:
 
 ### Highlight
 
-#### Plugins
+#### Plug-ins
 
-QLColorCode enables some Highlight plugins :
+QLColorCode enables some Highlight plug-ins :
 
 - In all languages: `outhtml_modern_fonts` and `outhtml_codefold`.
 - Java (sources and classes): `java_library`.
@@ -115,27 +115,27 @@ QLColorCode enables some Highlight plugins :
 - Scala: `scala_ref_scala_lang_org`.
 
 #### Handled languages
-Highlight can handle lots and lots of languages, but this plugin will only be
-invoked for file types that the OS knows are type "source-code".  Since the OS
+Highlight can handle lots and lots of languages, but this plug-in will only be
+invoked for file types that the OS knows are type "source-code". Since the OS
 only knows about a limited number of languages, I've added Universal Type
-Identifier (UTI) declarations for several "interesting" languages.  If I've
+Identifier (UTI) declarations for several "interesting" languages. If I've
 missed your favorite language, take a look at the Info.plist file inside the
-plugin bundle and look for the UTImportedTypeDeclarations section.  I
+plug-in bundle and look for the UTImportedTypeDeclarations section. I
 haven't added all the languages that Highlight can handle because it's rumored
 that having two conflicting UTI declarations for the same file extension can
-cause problems.  Note that if you do edit the Info.plist file you need to
-nudge the system to tell it something has changed.  Moving the plugin to the
+cause problems. Note that if you do edit the Info.plist file you need to
+nudge the system to tell it something has changed. Moving the plug-in to the
 desktop then back to its installed location should do the trick.
 
-As an aside, by changing colorize.sh you can use this plugin to render any file
+As an aside, by changing colorize.sh you can use this plug-in to render any file
 type that you can convert to HTML. Have fun, and let me know if you do anything
 cool!
 
 ##### Adding Language Types
 
 If QLColorCode doesn't display PHP and JavaScript code properly, their types may
-need to be added to Info.plist.  Finding the right type string to use is the 
-tricky part.  Getting the type strings and getting Info.plist edits to take effect
+need to be added to Info.plist. Finding the right type string to use is the 
+tricky part. Getting the type strings and getting Info.plist edits to take effect
 is easy by following the steps below, which explain how to add support for PHP:
 
 0. In Terminal.app (or any shell prompt), enter the command:
@@ -144,7 +144,7 @@ is easy by following the steps below, which explain how to add support for PHP:
   mdls -name kMDItemContentType /full/path/to/file.php
   ```
   
-  Use the path to any PHP file.  The response will be:
+  Use the path to any PHP file. The response will be:
   
   ``` txt
   kMDItemContentType = "public.php-script"
@@ -171,11 +171,9 @@ is easy by following the steps below, which explain how to add support for PHP:
 
 0. Save the updated Info.plist file.
 
-0. Try it in Finder.  (It's usually unnecessary to move/return the QLColorCode
-  extension, restart QuickLook, or restart the Finder, but it wouldn't be surprising
-  that some users might need to do so.)
+0. Try it in Finder. (It's usually unnecessary to move/return the QLColorCode extension, restart QuickLook, or restart the Finder, but it wouldn't be surprising that some users might need to do so.)
 
 The Info.plist included with this version of QLColorCode already contains types
 for PHP and JavaScript code, but these steps show how easy it is to add other
-types.  (Maybe somebody will develop a Preference Pane for QLColorCode to make
+types. (Maybe somebody will develop a Preference Pane for QLColorCode to make
 this even easier.)
