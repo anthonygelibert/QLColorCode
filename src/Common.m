@@ -74,7 +74,7 @@ NSData *colorizeURL(CFBundleRef bundle, CFURLRef url, int *status, int thumbnail
                                 [[NSProcessInfo processInfo] environment]];
 
     NSString *path = [env objectForKey: @"PATH"];
-    NSString *newPath = [path stringByAppendingString: @":/usr/local/bin:/usr/local/sbin"];
+    NSString *newPath = [path stringByAppendingString: @":/opt/local/bin:/usr/local/bin:/usr/local/sbin"];
     [env setObject: newPath forKey: @"PATH"];
 
     // Try to find highlight location
