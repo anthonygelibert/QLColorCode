@@ -37,6 +37,7 @@
 				<string>dyn.ah62d4rv4ge80g2pcqf0a</string>
 				<string>dyn.ah62d4rv4ge81e62</string>
 				<string>dyn.ah62d4rv4ge80u62</string>
+				<string>dyn.ah62d4rv4ge80g6u</string>
 			</array>
 		</dict>
 	</array>
@@ -1170,6 +1171,23 @@
 				<key>public.filename-extension</key>
 				<array>
 					<string>hs</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>dyn.ah62d4rv4ge80g6u</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>Crystal Source File</string>
+			<key>UTTypeIdentifier</key>
+			<string>org.crystal-lang.source</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>cr</string>
 				</array>
 			</dict>
 		</dict>
