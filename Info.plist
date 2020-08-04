@@ -33,6 +33,10 @@
 				<string>dyn.ah62d4rv4ge80g62</string>
 				<string>dyn.ah62d4rv4ge80w5pq</string>
 				<string>dyn.ah62d4rv4ge80s52</string>
+				<string>public.objective-c-source</string>
+				<string>public.c-source</string>
+				<string>public.python-script</string>
+				<string>public.yaml</string>
 			</array>
 		</dict>
 	</array>
