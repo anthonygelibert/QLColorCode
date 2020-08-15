@@ -12,6 +12,7 @@
 			<key>LSItemContentTypes</key>
 			<array>
 				<string>public.source-code</string>
+				<string>public.yaml</string>
 				<string>public.php-script</string>
 				<string>com.netscape.javascript-source</string>
 				<string>com.microsoft.c-sharp</string>
@@ -227,6 +228,23 @@
 					<string>ctx</string>
 					<string>sty</string>
 					<string>cls</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.yaml</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>YAML file</string>
+			<key>UTTypeIdentifier</key>
+			<string>public.yaml</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>yaml</string>
 				</array>
 			</dict>
 		</dict>
