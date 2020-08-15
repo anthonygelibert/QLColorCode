@@ -4,6 +4,7 @@
     * Add HS/Cabal support.
     * Add YAML support.
     * Add RUST Support.
+    * Fix type of QLPreviewHeight.
 
 2.1.0:
     * Add option to preview file as RTF  (thanks @silum).
