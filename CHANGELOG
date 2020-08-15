@@ -1,6 +1,7 @@
 2.1.1 (WIP):
     * Add JetBrain IML Project file support.
-    * Add Go support (in ~/Library/QuickLook).
+    * Add Go support.
+    * Add HS/Cabal support.
 
 2.1.0:
     * Add option to preview file as RTF  (thanks @silum).

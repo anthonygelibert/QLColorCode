@@ -33,6 +33,8 @@
 				<string>dyn.ah62d4rv4ge80g62</string>
 				<string>dyn.ah62d4rv4ge80w5pq</string>
 				<string>dyn.ah62d4rv4ge80s52</string>
+				<string>dyn.ah62d4rv4ge80g2pcqf0a</string>
+				<string>dyn.ah62d4rv4ge80u62</string>
 			</array>
 		</dict>
 	</array>
@@ -1097,6 +1099,40 @@
 				<key>public.filename-extension</key>
 				<array>
 					<string>iml</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>dyn.ah62d4rv4ge80g2pcqf0a</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>CABAL file</string>
+			<key>UTTypeIdentifier</key>
+			<string>public.cabal</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>cabal</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>dyn.ah62d4rv4ge80u62</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>Haskell file</string>
+			<key>UTTypeIdentifier</key>
+			<string>public.haskell</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>hs</string>
 				</array>
 			</dict>
 		</dict>
