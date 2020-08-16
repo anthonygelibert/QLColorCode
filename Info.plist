@@ -9,6 +9,8 @@
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>QLGenerator</string>
+			<key>CFBundleTypeName</key>
+			<string></string>
 			<key>LSItemContentTypes</key>
 			<array>
 				<string>public.source-code</string>
@@ -25,12 +27,18 @@
 				<string>public.plain-text</string>
 				<string>com.sun.java-class</string>
 				<string>org.vim.vim-script</string>
+				<string>org.tug.lua</string>
 				<string>public.tex</string>
 				<string>public.text</string>
 				<string>public.shell-script</string>
 				<string>public.c-header</string>
 				<string>public.objective-c-source</string>
 				<string>public.c-source</string>
+				<string>public.csh-script</string>
+				<string>public.zsh-script</string>
+				<string>public.python-script</string>
+				<string>com.apple.property-list</string>
+				<string>com.apple.xcode.strings-text</string>
 				<string>dyn.ah62d4rv4ge81g6pq</string>
 				<string>dyn.ah62d4rv4ge8007a</string>
 				<string>dyn.ah62d4rv4ge80s6xbqv0gn</string>
@@ -42,6 +50,7 @@
 				<string>dyn.ah62d4rv4ge81e62</string>
 				<string>dyn.ah62d4rv4ge80u62</string>
 				<string>dyn.ah62d4rv4ge80g6u</string>
+				<string>dyn.ah62d4rv4ge80g3xh</string>
 			</array>
 		</dict>
 	</array>

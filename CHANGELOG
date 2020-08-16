@@ -6,6 +6,7 @@
     * Add RUST Support.
     * Fix type of QLPreviewHeight.
     * Add Crystal Support (thanks @crjaensch).
+    * Add C/C++/Objective-C/Lua/CSH/ZSH/Python/CFG support.
 
 2.1.0:
     * Add option to preview file as RTF  (thanks @silum).
