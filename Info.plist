@@ -56,9 +56,9 @@
 	<key>CFBundleName</key>
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundleShortVersionString</key>
-	<string>${CURRENT_PROJECT_VERSION}</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
-	<string>${CURRENT_PROJECT_VERSION}</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>CFPlugInDynamicRegisterFunction</key>
 	<string></string>
 	<key>CFPlugInDynamicRegistration</key>
@@ -80,9 +80,9 @@
 	<key>QLNeedsToBeRunInMainThread</key>
 	<true/>
 	<key>QLPreviewHeight</key>
-	<real>640</real>
+	<integer>1024</integer>
 	<key>QLPreviewWidth</key>
-	<real>800</real>
+	<integer>1280</integer>
 	<key>QLSupportsConcurrentRequests</key>
 	<true/>
 	<key>QLThumbnailMinimumSize</key>
@@ -90,14 +90,14 @@
 	<key>UTImportedTypeDeclarations</key>
 	<array>
 		<dict>
-			<key>UTTypeIdentifier</key>
-			<string>com.dhowett.logos</string>
-			<key>UTTypeDescription</key>
-			<string>Logos Source File</string>
 			<key>UTTypeConformsTo</key>
 			<array>
 				<string>public.source-code</string>
 			</array>
+			<key>UTTypeDescription</key>
+			<string>Logos Source File</string>
+			<key>UTTypeIdentifier</key>
+			<string>com.dhowett.logos</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
