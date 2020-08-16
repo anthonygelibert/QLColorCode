@@ -51,6 +51,7 @@
 				<string>dyn.ah62d4rv4ge80u62</string>
 				<string>dyn.ah62d4rv4ge80g6u</string>
 				<string>dyn.ah62d4rv4ge80g3xh</string>
+				<string>dyn.ah62d4rv4ge81q7pf</string>
 			</array>
 		</dict>
 	</array>
@@ -1201,6 +1202,23 @@
 				<key>public.filename-extension</key>
 				<array>
 					<string>cr</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>dyn.ah62d4rv4ge81q7pf</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>Vue Source File</string>
+			<key>UTTypeIdentifier</key>
+			<string>org.vue.source</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>vue</string>
 				</array>
 			</dict>
 		</dict>
