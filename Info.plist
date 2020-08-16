@@ -27,6 +27,10 @@
 				<string>org.vim.vim-script</string>
 				<string>public.tex</string>
 				<string>public.text</string>
+				<string>public.shell-script</string>
+				<string>public.c-header</string>
+				<string>public.objective-c-source</string>
+				<string>public.c-source</string>
 				<string>dyn.ah62d4rv4ge81g6pq</string>
 				<string>dyn.ah62d4rv4ge8007a</string>
 				<string>dyn.ah62d4rv4ge80s6xbqv0gn</string>
