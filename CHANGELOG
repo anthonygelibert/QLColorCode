@@ -5,6 +5,7 @@
     * Add YAML support (thanks @JJGO).
     * Add RUST Support.
     * Fix type of QLPreviewHeight.
+    * Add Crystal Support (thanks @crjaensch).
 
 2.1.0:
     * Add option to preview file as RTF  (thanks @silum).
