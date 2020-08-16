@@ -5,14 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/fr/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Changed
+
+- CHANGELOG follow "Keep a Changelog".
+
+### Removed
+
+- `jad` support.
+
+
 ## [3.0.0] — 2020-08-16
 
 ### Added
 
-- JetBrain IML Project file support (as standard XML files).
-- YAML support (thanks @JJGO).
-- Crystal Support (thanks @crjaensch).
-- HS/Cabal/VueJS/Go/Rust/C/C++/Objective-C/Lua/CSH/ZSH/Python/CFG support.
+- `JetBrain IML Project file` support (as standard XML files).
+- `YAML` support (thanks @JJGO).
+- `Crystal` Support (thanks @crjaensch).
+- `HS`/`Cabal`/`VueJS`/`Go`/`Rust`/`C`/`C++`/`Objective-C`/`Lua`/`CSH`/`ZSH`/`Python`/`CFG` support.
 - Support Mojave Dark mode (thanks @darkbrow).
 
 ### Removed
@@ -21,7 +32,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
-- Fix Height/Width/MinimumSize (thanks @darkbrow).
+- Fix `Height`/`Width`/`MinimumSize` (thanks @darkbrow).
 
 ## [2.1.0] — 2018-06-19
 
