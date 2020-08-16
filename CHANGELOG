@@ -9,6 +9,7 @@
     * Add C/C++/Objective-C/Lua/CSH/ZSH/Python/CFG support.
     * Add Vue support.
     * Fix Height/Width/MinimumSize (thanks @darkbrow).
+    * Support Mojave Dark mode (thanks @darkbrow).
 
 2.1.0:
     * Add option to preview file as RTF  (thanks @silum).
