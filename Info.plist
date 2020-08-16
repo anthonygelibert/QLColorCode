@@ -89,13 +89,13 @@
 	<key>QLNeedsToBeRunInMainThread</key>
 	<true/>
 	<key>QLPreviewHeight</key>
-	<integer>1024</integer>
+	<real>800</real>
 	<key>QLPreviewWidth</key>
-	<integer>1280</integer>
+	<real>800</real>
 	<key>QLSupportsConcurrentRequests</key>
 	<true/>
 	<key>QLThumbnailMinimumSize</key>
-	<integer>32</integer>
+	<real>17</real>
 	<key>UTImportedTypeDeclarations</key>
 	<array>
 		<dict>
