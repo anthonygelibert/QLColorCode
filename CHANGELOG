@@ -2,7 +2,7 @@
     * Add JetBrain IML Project file support.
     * Add Go support.
     * Add HS/Cabal support.
-    * Add YAML support.
+    * Add YAML support (thanks @JJGO).
     * Add RUST Support.
     * Fix type of QLPreviewHeight.
 
