@@ -1,4 +1,4 @@
-2.2.0 (WIP):
+3.0.0:
     * Add JetBrain IML Project file support.
     * Add Go support.
     * Add HS/Cabal support.
