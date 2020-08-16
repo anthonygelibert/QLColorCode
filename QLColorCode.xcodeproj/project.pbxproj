@@ -29,8 +29,8 @@
 		EA43671F15F6BF9C009DA6C0 /* GeneratePreviewForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = EA43671915F6BF9C009DA6C0 /* GeneratePreviewForURL.m */; };
 		EA43672015F6BF9C009DA6C0 /* GenerateThumbnailForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = EA43671A15F6BF9C009DA6C0 /* GenerateThumbnailForURL.m */; };
 		EA43672115F6BF9C009DA6C0 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = EA43671B15F6BF9C009DA6C0 /* main.c */; };
-		EA43672F15F6C1B8009DA6C0 /* CHANGELOG in Resources */ = {isa = PBXBuildFile; fileRef = EA43672B15F6C1B8009DA6C0 /* CHANGELOG */; };
 		EA43673015F6C1B8009DA6C0 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = EA43672C15F6C1B8009DA6C0 /* COPYING */; };
+		EACE3C6A24E8D93800B58A51 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = EACE3C6924E8D93800B58A51 /* CHANGELOG.md */; };
 		EAE9D2CC169E2B3500A67B2F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EAE9D2CB169E2B3500A67B2F /* README.md */; };
 /* End PBXBuildFile section */
 
@@ -66,9 +66,9 @@
 		EA43671915F6BF9C009DA6C0 /* GeneratePreviewForURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeneratePreviewForURL.m; path = src/GeneratePreviewForURL.m; sourceTree = "<group>"; };
 		EA43671A15F6BF9C009DA6C0 /* GenerateThumbnailForURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenerateThumbnailForURL.m; path = src/GenerateThumbnailForURL.m; sourceTree = "<group>"; };
 		EA43671B15F6BF9C009DA6C0 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = main.c; path = src/main.c; sourceTree = "<group>"; };
-		EA43672B15F6C1B8009DA6C0 /* CHANGELOG */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG; sourceTree = "<group>"; };
 		EA43672C15F6C1B8009DA6C0 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
 		EA43673315F6C23F009DA6C0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EACE3C6924E8D93800B58A51 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		EAE9D2CB169E2B3500A67B2F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,7 +86,7 @@
 		089C166AFE841209C02AAC07 /* QLColorCode */ = {
 			isa = PBXGroup;
 			children = (
-				EA43672B15F6C1B8009DA6C0 /* CHANGELOG */,
+				EACE3C6924E8D93800B58A51 /* CHANGELOG.md */,
 				EA43672C15F6C1B8009DA6C0 /* COPYING */,
 				EAE9D2CB169E2B3500A67B2F /* README.md */,
 				08FB77AFFE84173DC02AAC07 /* Source */,
@@ -191,7 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA43671C15F6BF9C009DA6C0 /* colorize.sh in Resources */,
-				EA43672F15F6C1B8009DA6C0 /* CHANGELOG in Resources */,
+				EACE3C6A24E8D93800B58A51 /* CHANGELOG.md in Resources */,
 				EA43673015F6C1B8009DA6C0 /* COPYING in Resources */,
 				EAE9D2CC169E2B3500A67B2F /* README.md in Resources */,
 			);
