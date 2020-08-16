@@ -16,6 +16,7 @@ Alternative, if you use [Homebrew Cask](https://github.com/caskroom/homebrew-cas
 install with `brew cask install qlcolorcode`.
 
 ## Settings
+
 If you want to configure `QLColorCode`, there are several `defaults` commands that could be useful:
 
 Setting the text encoding (default is `UTF-8`). Two settings are required. The first sets Highlight's encoding, the second sets Webkit's:
@@ -96,7 +97,6 @@ to QLStephen.
 
 QLColorCode decompiles some formats:
 
-- **Java class**. It requires [jad](http://varaneckas.com/jad/) installed at `/usr/local/bin/jad`.
 - **Compiled AppleScript**. It requires `osadecompile` installed at `/usr/bin/osadecompile`.
 - **Binary PLIST**. It requires `plutil` installed at `/usr/bin/plutil`.
 
@@ -106,7 +106,7 @@ QLColorCode decompiles some formats:
 
 QLColorCode enables some Highlight plug-ins :
 
-- In all languages: `outhtml_modern_fonts` and `outhtml_codefold`.
+- In all languages:  `outhtml_codefold` and `reduce_filesize`.
 - Java (sources and classes): `java_library`.
 - C/C++: `cpp_syslog`, `cpp_ref_cplusplus_com` and `cpp_ref_local_includes`.
 - Perl: `perl_ref_perl_org`.
@@ -115,6 +115,7 @@ QLColorCode enables some Highlight plug-ins :
 - Scala: `scala_ref_scala_lang_org`.
 
 #### Handled languages
+
 Highlight can handle lots and lots of languages, but this plug-in will only be
 invoked for file types that the OS knows are type "source-code". Since the OS
 only knows about a limited number of languages, I've added Universal Type
@@ -134,44 +135,42 @@ cool!
 ##### Adding Language Types
 
 If QLColorCode doesn't display PHP and JavaScript code properly, their types may
-need to be added to Info.plist. Finding the right type string to use is the 
+need to be added to Info.plist. Finding the right type string to use is the
 tricky part. Getting the type strings and getting Info.plist edits to take effect
 is easy by following the steps below, which explain how to add support for PHP:
 
-0. In Terminal.app (or any shell prompt), enter the command:
-  
+1. In Terminal.app (or any shell prompt), enter the command:
+
   ``` bash
   mdls -name kMDItemContentType /full/path/to/file.php
   ```
-  
+
   Use the path to any PHP file. The response will be:
-  
+
   ``` txt
   kMDItemContentType = "public.php-script"
   ```
-  
+
   The string `public.php-script` is the type string needed in a later step.
-  
-0. Again at a shell prompt, enter the command:
-  
+
+2. Again at a shell prompt, enter the command:
+
   ``` bash
   open ~/Library/QuickLook/QLColorCode.qlgenerator/Contents/Info.plist
   ```
-  
+
   This will open Info.plist in Xcode.app.
-  
-0. In Xcode.app's edit window for Info.plist, go to: 
-  
+
+3. In Xcode.app's edit window for Info.plist, go to:
+
   Document types > Item 0 > Document Content Type UTIs
-  
+
   (If the editor is showing raw keys, that's:
   CFBundleDocumentTypes > Item 0 > LSItemContentTypes)
 
-0. Add an item for `public.php-script`, the type string found in the first step.
-
-0. Save the updated Info.plist file.
-
-0. Try it in Finder. (It's usually unnecessary to move/return the QLColorCode extension, restart QuickLook, or restart the Finder, but it wouldn't be surprising that some users might need to do so.)
+4. Add an item for `public.php-script`, the type string found in the first step.
+5. Save the updated Info.plist file.
+6. Try it in Finder. (It's usually unnecessary to move/return the QLColorCode extension, restart QuickLook, or restart the Finder, but it wouldn't be surprising that some users might need to do so.)
 
 The Info.plist included with this version of QLColorCode already contains types
 for PHP and JavaScript code, but these steps show how easy it is to add other
