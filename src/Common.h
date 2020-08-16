@@ -6,8 +6,8 @@
  *  Copyright 2007 Nathaniel Gray.
  *
  */
-#import <CoreFoundation/CoreFoundation.h>
-#import <Foundation/Foundation.h>
+@import CoreFoundation;
+@import Foundation;
 
 #ifdef DEBUG
 #define n8log(...) NSLog(__VA_ARGS__)
