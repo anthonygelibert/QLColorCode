@@ -57,11 +57,6 @@ case ${target} in
         lang=java
         plugin=(--plug-in java_library)
         ;;
-    *.class )
-        lang=java
-        reader=(/usr/local/bin/jad -ff -dead -noctor -p -t ${target})
-        plugin=(--plug-in java_library)
-        ;;
     *.pde | *.ino )
         lang=c
         ;;
