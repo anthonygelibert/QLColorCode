@@ -7,10 +7,10 @@
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>QLGenerator</string>
 			<key>CFBundleTypeName</key>
 			<string></string>
+			<key>CFBundleTypeRole</key>
+			<string>QLGenerator</string>
 			<key>LSItemContentTypes</key>
 			<array>
 				<string>public.source-code</string>
