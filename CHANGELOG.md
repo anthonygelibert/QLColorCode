@@ -7,13 +7,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+Nothing
+
+## [3.0.1] — 2020-09-04
+
 ### Added
 
 - `bazel` support.
 
 ### Changed
 
-- CHANGELOG follow "Keep a Changelog".
+- `CHANGELOG.md` follows "Keep a Changelog".
 
 ### Removed
 
