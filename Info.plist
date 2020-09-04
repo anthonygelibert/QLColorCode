@@ -51,6 +51,9 @@
 				<string>dyn.ah62d4rv4ge80g6u</string>
 				<string>dyn.ah62d4rv4ge80g3xh</string>
 				<string>dyn.ah62d4rv4ge81q7pf</string>
+				<string>dyn.ah62d4rv4ge81a6xtsbw1e7dmqz3u</string>
+				<string>dyn.ah62d4rv4ge80e2p4qz0a</string>
+				<string>dyn.ah62d4rv4ge80e8xq</string>
 			</array>
 		</dict>
 	</array>
@@ -1218,6 +1221,25 @@
 				<key>public.filename-extension</key>
 				<array>
 					<string>vue</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>dyn.ah62d4rv4ge80e2p4qz0a</string>
+				<string>dyn.ah62d4rv4ge80e8xq</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>Bazel Source File</string>
+			<key>UTTypeIdentifier</key>
+			<string>org.bazel.source</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>bazel</string>
+					<string>bzl</string>
 				</array>
 			</dict>
 		</dict>
