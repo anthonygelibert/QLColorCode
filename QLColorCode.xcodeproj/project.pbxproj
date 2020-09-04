@@ -68,6 +68,7 @@
 		EA43671B15F6BF9C009DA6C0 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = main.c; path = src/main.c; sourceTree = "<group>"; };
 		EA43672C15F6C1B8009DA6C0 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
 		EA43673315F6C23F009DA6C0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA4FF23425027B3F00A5421D /* Travis.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Travis.xctestplan; sourceTree = "<group>"; };
 		EACE3C6924E8D93800B58A51 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		EAE9D2CB169E2B3500A67B2F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +87,7 @@
 		089C166AFE841209C02AAC07 /* QLColorCode */ = {
 			isa = PBXGroup;
 			children = (
+				EA4FF23425027B3F00A5421D /* Travis.xctestplan */,
 				EACE3C6924E8D93800B58A51 /* CHANGELOG.md */,
 				EA43672C15F6C1B8009DA6C0 /* COPYING */,
 				EAE9D2CB169E2B3500A67B2F /* README.md */,
@@ -286,9 +288,9 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3.0.1;
+				CURRENT_PROJECT_VERSION = 3.0.2.dev1;
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 3.0.1;
+				MARKETING_VERSION = 3.0.2.dev1;
 				OTHER_CFLAGS = "-DDEBUG";
 			};
 			name = Debug;
@@ -298,9 +300,9 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3.0.1;
+				CURRENT_PROJECT_VERSION = 3.0.2.dev1;
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 3.0.1;
+				MARKETING_VERSION = 3.0.2.dev1;
 			};
 			name = Release;
 		};
