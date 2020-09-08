@@ -9,7 +9,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
-- `xsd`/`xquery` support.
+- `xsd`/`xquery`/`xml`/`xsl` support.
+
+### Changed
+
+- Minimum rendering size is now `9`.
 
 ## [3.0.1] — 2020-09-04
 
