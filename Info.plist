@@ -56,6 +56,7 @@
 				<string>dyn.ah62d4rv4ge80e8xq</string>
 				<string>dyn.ah62d4rv4ge81u65e</string>
 				<string>dyn.ah62d4rv4ge81u6pzqz3hw</string>
+				<string>org.vim.xsl-file</string>
 			</array>
 		</dict>
 	</array>
@@ -1250,9 +1251,11 @@
 			<array>
 				<string>dyn.ah62d4rv4ge81u65e</string>
 				<string>dyn.ah62d4rv4ge81u6pzqz3hw</string>
+				<string>org.vim.xsl-file</string>
+				<string>public.xml</string>
 			</array>
 			<key>UTTypeDescription</key>
-			<string>XSD/XQuery/ProfRaw Source File</string>
+			<string>XSD/XQuery/XSL/XML Source File</string>
 			<key>UTTypeIdentifier</key>
 			<string>org.xml-tools.source</string>
 			<key>UTTypeTagSpecification</key>
@@ -1261,6 +1264,8 @@
 				<array>
 					<string>xsd</string>
 					<string>xquery</string>
+					<string>xml</string>
+					<string>xsl</string>
 				</array>
 			</dict>
 		</dict>
