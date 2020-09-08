@@ -54,6 +54,8 @@
 				<string>dyn.ah62d4rv4ge81a6xtsbw1e7dmqz3u</string>
 				<string>dyn.ah62d4rv4ge80e2p4qz0a</string>
 				<string>dyn.ah62d4rv4ge80e8xq</string>
+				<string>dyn.ah62d4rv4ge81u65e</string>
+				<string>dyn.ah62d4rv4ge81u6pzqz3hw</string>
 			</array>
 		</dict>
 	</array>
@@ -1240,6 +1242,25 @@
 				<array>
 					<string>bazel</string>
 					<string>bzl</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>dyn.ah62d4rv4ge81u65e</string>
+				<string>dyn.ah62d4rv4ge81u6pzqz3hw</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>XSD/XQuery/ProfRaw Source File</string>
+			<key>UTTypeIdentifier</key>
+			<string>org.xml-tools.source</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>xsd</string>
+					<string>xquery</string>
 				</array>
 			</dict>
 		</dict>
