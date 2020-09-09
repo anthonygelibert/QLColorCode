@@ -67,6 +67,10 @@ case ${target} in
     *.rdf | *.xul | *.ecore )
         lang=xml
         ;;
+    *.pyc )
+        lang=python
+        reader=(/usr/local/bin/uncompyle6 ${target})
+        ;;
     *.ascr | *.scpt )
         lang=applescript
         reader=(/usr/bin/osadecompile ${target})
@@ -99,7 +103,7 @@ case ${target} in
         lang=py
         plugin=(--plug-in python_ref_python_org)
         ;;
-    *.sh | *.zsh | *.bash | *.csh | *.fish | *.bashrc | *.zshrc )
+    *.sh | *.zsh | *.bash | *.csh | *.bashrc | *.zshrc | *.xsh )
         lang=sh
         plugin=(--plug-in bash_functions)
         ;;

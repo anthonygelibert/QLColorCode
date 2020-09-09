@@ -7,10 +7,25 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+- Nothing
+
+## [3.1.0] — 2020-09-09
+
 ### Added
 
 - `kts` (kotlin) support.
+- `xsh` support.
+- `pyc` support (decompilation with `uncompyle6` [has to be in `/usr/local/bin`])
+- `rst` support.
+- `perl` support.
+- `bats` (Bash Automated Testing System) support.
+
+### Fixed
+
+- `fish` support. 
 - `bat` (Windows Batch) support.
+- `diff` support.
+- `bash` support.
 
 ## [3.0.3] — 2020-09-09
 
