@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Nothing
 
+## [3.0.3] — 2020-09-09
+
+### Fixed
+
+- `xquery` support for forgotten extensions (thanks leo@leostuder.ch).
+
 ## [3.0.2] — 2020-09-08
 
 ### Added
