@@ -60,6 +60,8 @@
 				<string>dyn.ah62d4rv4ge81u7k</string>
 				<string>dyn.ah62d4rv4ge81u6pr</string>
 				<string>dyn.ah62d4rv4ge81u6k</string>
+				<string>dyn.ah62d4rv4ge8007dx</string>
+				<string>dyn.ah62d4rv4ge80e2py</string>
 			</array>
 		</dict>
 	</array>
@@ -415,6 +417,7 @@
 			<key>UTTypeConformsTo</key>
 			<array>
 				<string>public.source-code</string>
+				<string>dyn.ah62d4rv4ge80e2py</string>
 			</array>
 			<key>UTTypeDescription</key>
 			<string>DOS Batch Source File</string>
@@ -1089,6 +1092,23 @@
 				<key>public.filename-extension</key>
 				<array>
 					<string>kmt</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>dyn.ah62d4rv4ge8007dx</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>Kotlin source files</string>
+			<key>UTTypeIdentifier</key>
+			<string>org.kotlin.source</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>kts</string>
 				</array>
 			</dict>
 		</dict>
