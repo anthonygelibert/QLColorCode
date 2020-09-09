@@ -25,6 +25,7 @@
 				<string>com.apple.property-list</string>
 				<string>org.tug.tex</string>
 				<string>com.sun.java-class</string>
+				<string>com.sun.java-source</string>
 				<string>org.vim.vim-script</string>
 				<string>org.tug.lua</string>
 				<string>public.tex</string>
@@ -33,10 +34,21 @@
 				<string>public.c-header</string>
 				<string>public.objective-c-source</string>
 				<string>public.c-source</string>
+				<string>public.c-plus-plus-source</string>
+				<string>public.c-plus-plus-header</string>
+				<string>public.objective-c-plus-plus-source</string>
+				<string>public.assembly-source</string>
+				<string>com.apple.rez-source</string>
+				<string>public.mig-source</string>
+				<string>public.swift-source</string>
+				<string>public.pascal-source</string>
+				<string>com.apple.symbol-export</string>
 				<string>public.csh-script</string>
 				<string>public.zsh-script</string>
+				<string>com.apple.terminal.shell-script</string>
+				<string>com.apple.terminal.session</string>
+				<string>com.apple.terminal.settings</string>
 				<string>public.python-script</string>
-				<string>com.apple.property-list</string>
 				<string>com.apple.xcode.strings-text</string>
 				<string>dyn.ah62d4rv4ge81g6pq</string>
 				<string>dyn.ah62d4rv4ge8007a</string>
@@ -70,6 +82,12 @@
 				<string>dyn.ah62d4rv4ge80e2pysq</string>
 				<string>public.patch-file</string>
 				<string>public.bash-script</string>
+				<string>com.apple.xcode.bash-script</string>
+				<string>com.apple.xcode.csh-script</string>
+				<string>com.apple.xcode.ksh-script</string>
+				<string>com.apple.xcode.tcsh-script</string>
+				<string>com.apple.xcode.yacc-source</string>
+				<string>com.apple.xcode.zsh-script</string>
 			</array>
 		</dict>
 	</array>

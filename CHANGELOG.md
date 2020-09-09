@@ -7,7 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-- Nothing
+### Fixed
+
+- `java` support.
+- `C++` support.
+- `Objective-C++` support.
+- Others took [here](https://github.com/meissnem/QLColorCode/blob/master/Info.plist).
 
 ## [3.1.0] — 2020-09-09
 
