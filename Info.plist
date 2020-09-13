@@ -14,6 +14,7 @@
 			<key>LSItemContentTypes</key>
 			<array>
 				<string>public.source-code</string>
+				<string>public.ruby-script</string>
 				<string>public.yaml</string>
 				<string>public.php-script</string>
 				<string>com.netscape.javascript-source</string>
@@ -78,6 +79,11 @@
 				<string>dyn.ah62d4rv4ge81u65k</string>
 				<string>dyn.ah62d4rv4ge81a8pd</string>
 				<string>dyn.ah62d4rv4ge81e65y</string>
+				<string>dyn.ah62d4rv4ge80n5a</string>
+				<string>dyn.ah62d4rv4ge80w5u</string>
+				<string>dyn.ah62d4rv4ge81k</string>
+				<string>dyn.ah62d4rv4ge80c5k</string>
+				<string>dyn.ah62d4rv4ge80c3dtqq</string>
 				<string>public.perl-script</string>
 				<string>dyn.ah62d4rv4ge80e2pysq</string>
 				<string>public.patch-file</string>

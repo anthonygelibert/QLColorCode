@@ -88,6 +88,12 @@ case ${target} in
     *.m )
         lang=objc
         ;;
+    *.am | *.in )
+        lang=make
+        ;;
+    *.mod )
+        lang=go
+        ;;
     *.pch | *.h )
         if grep -q "@interface" <(${target}) &> /dev/null; then
             lang=objc
@@ -103,7 +109,7 @@ case ${target} in
         lang=py
         plugin=(--plug-in python_ref_python_org)
         ;;
-    *.sh | *.zsh | *.bash | *.csh | *.bashrc | *.zshrc | *.xsh )
+    *.sh | *.zsh | *.bash | *.csh | *.bashrc | *.zshrc | *.xsh | *.bats )
         lang=sh
         plugin=(--plug-in bash_functions)
         ;;
@@ -116,6 +122,9 @@ case ${target} in
         ;;
     *.kmt )
         lang=scala
+        ;;
+    *.adoc )
+        lang=asciidoc
         ;;
     * )
         lang=${target##*.}
