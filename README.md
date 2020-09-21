@@ -32,9 +32,10 @@ Setting the font size (default is `10`):
 
     defaults write org.n8gray.QLColorCode fontSizePoints 9
 
-Setting the color style (default is `edit-xcode`, see [all available themes](http://www.andre-simon.de/doku/highlight/theme-samples.php)):
+Setting the color style for `light` and `dark` mode (see [all available themes](http://www.andre-simon.de/doku/highlight/theme-samples.php)):
 
-    defaults write org.n8gray.QLColorCode hlTheme ide-xcode
+    defaults write org.n8gray.QLColorCode lightTheme solarized-light
+    defaults write org.n8gray.QLColorCode darkTheme solarized-dark
 
 Setting the thumbnail color style (deactivated by default):
 
