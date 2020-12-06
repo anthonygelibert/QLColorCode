@@ -73,25 +73,6 @@ NSData *colorizeURL(CFBundleRef bundle, CFURLRef url, int *status, int thumbnail
     NSMutableDictionary *env = [NSMutableDictionary dictionaryWithDictionary:
                                 [[NSProcessInfo processInfo] environment]];
 
-    NSString *path = [env objectForKey: @"PATH"];
-    NSString *newPath = [path stringByAppendingString: @":/opt/local/bin:/usr/local/bin:/usr/local/sbin"];
-    [env setObject: newPath forKey: @"PATH"];
-
-    // Try to find highlight location
-    NSString *highlightPath = [[defaults persistentDomainForName:myDomain] valueForKey:@"pathHL"];
-    if (highlightPath == nil) {
-        NSUserDefaults *userDefaults = [[NSUserDefaults alloc] init];
-        NSData* data = runTask(@"which highlight", env, status);
-        highlightPath = [[[[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding] autorelease] stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-        if (*status == 0 && [highlightPath hasPrefix: @"/"] && [highlightPath hasSuffix: @"highlight"]) { // i.e. highlightPath looks like the actual path
-            NSMutableDictionary *newDefaults = [NSMutableDictionary dictionaryWithObject:highlightPath forKey:@"pathHL"];
-            [newDefaults addEntriesFromDictionary: [defaults persistentDomainForName:myDomain]];
-            [userDefaults setPersistentDomain: newDefaults forName:myDomain];
-            [userDefaults synchronize];
-        }
-        [userDefaults release];
-    }
-
     [env addEntriesFromDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
 #ifdef DEBUG
                                    @"1", @"qlcc_debug",
@@ -103,7 +84,7 @@ NSData *colorizeURL(CFBundleRef bundle, CFURLRef url, int *status, int thumbnail
                                    @"edit-xcode", @"hlTheme",
 //                                   @"-lz -j 3 -t 4 --kw-case=capitalize ", @"extraHLFlags",
                                    @"-t 4 ", @"extraHLFlags",
-                                   @"/opt/local/bin/highlight", @"pathHL",
+                                   [rsrcEsc stringByAppendingString:@"/highlight"], @"pathHL",
                                    @"", @"maxFileSize",
                                    @"UTF-8", @"textEncoding",
                                    @"UTF-8", @"webkitTextEncoding", nil]];

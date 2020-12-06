@@ -1,0 +1,6 @@
+[submodule "hl/highlight"]
+	path = hl/highlight
+	url = https://gitlab.com/saalen/highlight.git
+[submodule "hl/lua"]
+	path = hl/lua
+	url = https://github.com/lua/lua.git

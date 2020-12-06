@@ -19,10 +19,26 @@
 			name = Package;
 			productName = Package;
 		};
+		26BACA63257CF90200486D28 /* Apply patches */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 26BACA67257CF90200486D28 /* Build configuration list for PBXAggregateTarget "Apply patches" */;
+			buildPhases = (
+				26BACA66257CF90200486D28 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "Apply patches";
+			productName = Package;
+		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
 		0ECBBA6C0CFCA37500416538 /* QLColorCode.qlgenerator in Copy to Library */ = {isa = PBXBuildFile; fileRef = 8D576316048677EA00EA77CD /* QLColorCode.qlgenerator */; };
+		26BACA53257CF04E00486D28 /* plugins in Resources */ = {isa = PBXBuildFile; fileRef = 26BACA52257CF04A00486D28 /* plugins */; };
+		26BACA54257CF04E00486D28 /* filetypes.conf in Resources */ = {isa = PBXBuildFile; fileRef = 26BACA51257CF01B00486D28 /* filetypes.conf */; };
+		26BACA58257CF06200486D28 /* highlight in Resources */ = {isa = PBXBuildFile; fileRef = 26BACA57257CF06200486D28 /* highlight */; };
+		26BACA5C257CF17400486D28 /* themes in Resources */ = {isa = PBXBuildFile; fileRef = 26BACA5B257CF17400486D28 /* themes */; };
+		26BACA60257CF60700486D28 /* langDefs in Resources */ = {isa = PBXBuildFile; fileRef = 26BACA5F257CF60600486D28 /* langDefs */; };
 		EA43671C15F6BF9C009DA6C0 /* colorize.sh in Resources */ = {isa = PBXBuildFile; fileRef = EA43671615F6BF9C009DA6C0 /* colorize.sh */; };
 		EA43671D15F6BF9C009DA6C0 /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = EA43671715F6BF9C009DA6C0 /* Common.h */; };
 		EA43671E15F6BF9C009DA6C0 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = EA43671815F6BF9C009DA6C0 /* Common.m */; };
@@ -42,6 +58,27 @@
 			remoteGlobalIDString = 8D57630D048677EA00EA77CD;
 			remoteInfo = QLColorCode;
 		};
+		26BAC9C4257CE96D00486D28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26BAC9AB257CE89900486D28;
+			remoteInfo = highlight;
+		};
+		26BAC9C6257CE97100486D28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26BAC9BC257CE93200486D28;
+			remoteInfo = lua;
+		};
+		26BACA6E257CF94500486D28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26BACA63257CF90200486D28;
+			remoteInfo = "Apply patches";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -59,6 +96,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		26BACA51257CF01B00486D28 /* filetypes.conf */ = {isa = PBXFileReference; lastKnownFileType = text; name = filetypes.conf; path = hl/highlight/filetypes.conf; sourceTree = "<group>"; };
+		26BACA52257CF04A00486D28 /* plugins */ = {isa = PBXFileReference; lastKnownFileType = folder; name = plugins; path = hl/highlight/plugins; sourceTree = "<group>"; };
+		26BACA57257CF06200486D28 /* highlight */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = highlight; path = hl/highlight/src/highlight; sourceTree = "<group>"; };
+		26BACA5B257CF17400486D28 /* themes */ = {isa = PBXFileReference; lastKnownFileType = folder; name = themes; path = hl/highlight/themes; sourceTree = "<group>"; };
+		26BACA5F257CF60600486D28 /* langDefs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = langDefs; path = hl/highlight/langDefs; sourceTree = "<group>"; };
 		8D576316048677EA00EA77CD /* QLColorCode.qlgenerator */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QLColorCode.qlgenerator; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA43671615F6BF9C009DA6C0 /* colorize.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = colorize.sh; path = src/colorize.sh; sourceTree = "<group>"; };
 		EA43671715F6BF9C009DA6C0 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Common.h; path = src/Common.h; sourceTree = "<group>"; };
@@ -86,6 +128,11 @@
 		089C166AFE841209C02AAC07 /* QLColorCode */ = {
 			isa = PBXGroup;
 			children = (
+				26BACA5F257CF60600486D28 /* langDefs */,
+				26BACA5B257CF17400486D28 /* themes */,
+				26BACA57257CF06200486D28 /* highlight */,
+				26BACA52257CF04A00486D28 /* plugins */,
+				26BACA51257CF01B00486D28 /* filetypes.conf */,
 				EACE3C6924E8D93800B58A51 /* CHANGELOG.md */,
 				EA43672C15F6C1B8009DA6C0 /* COPYING */,
 				EAE9D2CB169E2B3500A67B2F /* README.md */,
@@ -138,6 +185,39 @@
 		};
 /* End PBXHeadersBuildPhase section */
 
+/* Begin PBXLegacyTarget section */
+		26BAC9AB257CE89900486D28 /* highlight */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "-j9 cli";
+			buildConfigurationList = 26BAC9AC257CE89900486D28 /* Build configuration list for PBXLegacyTarget "highlight" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = hl/highlight;
+			dependencies = (
+				26BAC9C7257CE97100486D28 /* PBXTargetDependency */,
+			);
+			name = highlight;
+			passBuildSettingsInEnvironment = 1;
+			productName = highlight;
+		};
+		26BAC9BC257CE93200486D28 /* lua */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "-j9 $(ACTION)";
+			buildConfigurationList = 26BAC9BD257CE93200486D28 /* Build configuration list for PBXLegacyTarget "lua" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = hl/lua;
+			dependencies = (
+				26BACA6F257CF94500486D28 /* PBXTargetDependency */,
+			);
+			name = lua;
+			passBuildSettingsInEnvironment = 1;
+			productName = lua;
+		};
+/* End PBXLegacyTarget section */
+
 /* Begin PBXNativeTarget section */
 		8D57630D048677EA00EA77CD /* QLColorCode */ = {
 			isa = PBXNativeTarget;
@@ -153,6 +233,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				26BAC9C5257CE96D00486D28 /* PBXTargetDependency */,
 			);
 			name = QLColorCode;
 			productInstallPath = /Library/QuickLook;
@@ -168,6 +249,14 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					26BAC9AB257CE89900486D28 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					26BAC9BC257CE93200486D28 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
 			};
 			buildConfigurationList = 2CA326220896AD4900168862 /* Build configuration list for PBXProject "QLColorCode" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -183,6 +272,9 @@
 			targets = (
 				8D57630D048677EA00EA77CD /* QLColorCode */,
 				0E0E34E90D0097020086C1E6 /* Package */,
+				26BAC9AB257CE89900486D28 /* highlight */,
+				26BAC9BC257CE93200486D28 /* lua */,
+				26BACA63257CF90200486D28 /* Apply patches */,
 			);
 		};
 /* End PBXProject section */
@@ -192,6 +284,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26BACA60257CF60700486D28 /* langDefs in Resources */,
+				26BACA5C257CF17400486D28 /* themes in Resources */,
+				26BACA58257CF06200486D28 /* highlight in Resources */,
+				26BACA53257CF04E00486D28 /* plugins in Resources */,
+				26BACA54257CF04E00486D28 /* filetypes.conf in Resources */,
 				EA43671C15F6BF9C009DA6C0 /* colorize.sh in Resources */,
 				EACE3C6A24E8D93800B58A51 /* CHANGELOG.md in Resources */,
 				EA43673015F6C1B8009DA6C0 /* COPYING in Resources */,
@@ -213,7 +310,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = "/bin/zsh -x";
-			shellScript = "# shell script goes here\nif [ $BUILD_STYLE != \"Release\" ]; then\n   echo \"Error: Must use Release build style\"\n   exit 1\nfi\n\ncd $PROJECT_DIR\nmkdir -vp release\ncd release\npkgDir=QLColorCode-$CURRENT_PROJECT_VERSION\nrm -rf $pkgDir\nmkdir $pkgDir\ncp -rp $TARGET_BUILD_DIR/*.qlgenerator $pkgDir\ncp ../ReadMe.txt $pkgDir\ncp ../LICENSE.txt $pkgDir\ncp ../ChangeLog.txt $pkgDir\n# For some reason Xcode has been producing world-writable output on occasion\nchmod -R o-w $pkgDir\ntar cvzf $pkgDir.tgz $pkgDir\nopen $PROJECT_DIR/release";
+			shellScript = "# shell script goes here\ncd $PROJECT_DIR\nmkdir -vp release\ncd release\npkgDir=QLColorCode-$CURRENT_PROJECT_VERSION\nrm -rf $pkgDir\nmkdir $pkgDir\ncp -rp $TARGET_BUILD_DIR/*.qlgenerator $pkgDir\ncp ../ReadMe.txt $pkgDir\ncp ../LICENSE.txt $pkgDir\ncp ../ChangeLog.txt $pkgDir\n# For some reason Xcode has been producing world-writable output on occasion\nchmod -R o-w $pkgDir\ntar cvzf $pkgDir.tgz $pkgDir\nopen $PROJECT_DIR/release\n";
 		};
 		0E1280381061C3EA0078EC05 /* Reset quicklookd */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -229,6 +326,19 @@
 			shellPath = /bin/sh;
 			shellScript = "qlmanage -r\n";
 			showEnvVarsInLog = 0;
+		};
+		26BACA66257CF90200486D28 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd hl\n./apply-patches.sh\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -251,6 +361,21 @@
 			isa = PBXTargetDependency;
 			target = 8D57630D048677EA00EA77CD /* QLColorCode */;
 			targetProxy = 0E0E34ED0D0097280086C1E6 /* PBXContainerItemProxy */;
+		};
+		26BAC9C5257CE96D00486D28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26BAC9AB257CE89900486D28 /* highlight */;
+			targetProxy = 26BAC9C4257CE96D00486D28 /* PBXContainerItemProxy */;
+		};
+		26BAC9C7257CE97100486D28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26BAC9BC257CE93200486D28 /* lua */;
+			targetProxy = 26BAC9C6257CE97100486D28 /* PBXContainerItemProxy */;
+		};
+		26BACA6F257CF94500486D28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26BACA63257CF90200486D28 /* Apply patches */;
+			targetProxy = 26BACA6E257CF94500486D28 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -278,6 +403,192 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				PRODUCT_NAME = Package;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		26BAC9AD257CE89900486D28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = EU5R2QY9HJ;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		26BAC9AE257CE89900486D28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = EU5R2QY9HJ;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		26BAC9BE257CE93200486D28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = EU5R2QY9HJ;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		26BAC9BF257CE93200486D28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = EU5R2QY9HJ;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		26BACA68257CF90200486D28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "Package copy-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+			};
+			name = Debug;
+		};
+		26BACA69257CF90200486D28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "Package copy-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				ZERO_LINK = NO;
 			};
@@ -447,6 +758,33 @@
 			buildConfigurations = (
 				0E0E34EA0D0097020086C1E6 /* Debug */,
 				0E0E34EB0D0097020086C1E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26BAC9AC257CE89900486D28 /* Build configuration list for PBXLegacyTarget "highlight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26BAC9AD257CE89900486D28 /* Debug */,
+				26BAC9AE257CE89900486D28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26BAC9BD257CE93200486D28 /* Build configuration list for PBXLegacyTarget "lua" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26BAC9BE257CE93200486D28 /* Debug */,
+				26BAC9BF257CE93200486D28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26BACA67257CF90200486D28 /* Build configuration list for PBXAggregateTarget "Apply patches" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26BACA68257CF90200486D28 /* Debug */,
+				26BACA69257CF90200486D28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
