@@ -7,13 +7,16 @@
 This is a Quick Look plug-in that renders source code with syntax highlighting,
 using the [Highlight library](http://www.andre-simon.de).
 
-To install Highlight, [download the library manually](http://www.andre-simon.de/zip/download.php), or use Homebrew `brew install highlight`
-
 To install the plug-in, just drag it to `~/Library/QuickLook`.
 You may need to create that folder if it doesn't already exist.
 
-Alternative, if you use [Homebrew Cask](https://github.com/caskroom/homebrew-cask),
+Alternatively, if you use [Homebrew Cask](https://github.com/caskroom/homebrew-cask),
 install with `brew cask install qlcolorcode`.
+
+Also available on MacPorts: `port install QLColorCode`.
+
+To build the project, you must have Boost headers on your system in
+`/opt/local/include` or `/usr/local/include`.
 
 ## Settings
 

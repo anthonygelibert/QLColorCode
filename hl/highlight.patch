@@ -1,0 +1,24 @@
+diff --git a/src/makefile b/src/makefile
+index 9d0a08e..0a7a833 100644
+--- a/src/makefile
++++ b/src/makefile
+@@ -43,8 +43,8 @@ ifeq (${LUA_TEST},1)
+ LUA_PKG_NAME=lua
+ endif
+ 
+-LUA_CFLAGS=$(shell pkg-config --cflags ${LUA_PKG_NAME})
+-LUA_LIBS=$(shell pkg-config --libs ${LUA_PKG_NAME})
++LUA_CFLAGS=-I../../lua -I../..
++LUA_LIBS=../../lua/liblua.a
+ 
+ # luajit lib
+ # LUA_LIBS=$(shell pkg-config --libs luajit)
+@@ -75,7 +75,7 @@ LDFLAGS = -ldl
+ #LDFLAGS = ${LDFLAGS} -s
+ #LDFLAGS= -Wl,--as-needed
+ 
+-CXX_COMPILE=${CXX} ${CFLAGS} -c -I ${INCLUDE_DIR} ${LUA_CFLAGS}
++CXX_COMPILE=${CXX} ${CFLAGS} -c -I /opt/local/include -I /usr/local/include -I ${INCLUDE_DIR} ${LUA_CFLAGS}
+ 
+ # Data directories (data dir, configuration file dir)
+ CXX_DIR=-DHL_DATA_DIR=\"${HL_DATA_DIR}\" -DHL_CONFIG_DIR=\"${HL_CONFIG_DIR}\"

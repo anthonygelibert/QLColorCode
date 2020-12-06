@@ -1,3 +1,6 @@
+addons:
+  homebrew:
+    packages:
+      - boost
 language: objective-c
-xcode_project: QLColorCode.xcodeproj
-xcode_scheme: Travis
+script: set -o pipefail && xcodebuild -project QLColorCode.xcodeproj -scheme Travis build | xcpretty
