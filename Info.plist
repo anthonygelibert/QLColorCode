@@ -95,6 +95,8 @@
 				<string>com.apple.xcode.yacc-source</string>
 				<string>com.apple.xcode.zsh-script</string>
 				<string>dyn.ah62d4rv4ge81a63v</string>
+				<string>dyn.ah62d4rv4ge81k3x0qf3hg</string>
+				<string>dyn.ah62d4rv4ge81k3u</string>
 			</array>
 		</dict>
 	</array>
@@ -1303,6 +1305,25 @@
 				<key>public.filename-extension</key>
 				<array>
 					<string>vue</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>dyn.ah62d4rv4ge81k3x0qf3hg</string>
+				<string>dyn.ah62d4rv4ge81k3u</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>TensorFlow files</string>
+			<key>UTTypeIdentifier</key>
+			<string>org.tf.source</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>tfvars</string>
+					<string>tf</string>
 				</array>
 			</dict>
 		</dict>
