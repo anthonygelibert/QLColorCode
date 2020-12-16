@@ -12,6 +12,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/fr/1.0.0/) a
 
 - `tf` support.
 
+### Fixed
+
+- CI (thanks @jeffbyrnes).
+
 ## [4.0.0] — 2020-12-15
  
 **Big Sur support via integrated Lua and Highlight!  
