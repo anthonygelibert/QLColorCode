@@ -10,6 +10,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/fr/1.0.0/) a
 
 - NOTHING
 
+## [4.0.2] — 2020-12-16
+
+### Fixed
+
+- Version number in the final binary.
+
 ## [4.0.1] — 2020-12-16
 
 ### Added
