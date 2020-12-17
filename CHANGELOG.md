@@ -10,6 +10,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/fr/1.0.0/) a
 
 - NOTHING
 
+## [4.1.0] — 2020-12-17
+
 ### Changed
 
 - Compilation of `highlight`/`lua` (thanks @Tatsh).
