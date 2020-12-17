@@ -19,16 +19,16 @@
 			name = Package;
 			productName = Package;
 		};
-		26BACA63257CF90200486D28 /* Apply patches */ = {
+		26653B3A258B55350021CDD8 /* Copy lua.hpp */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 26BACA67257CF90200486D28 /* Build configuration list for PBXAggregateTarget "Apply patches" */;
+			buildConfigurationList = 26653B3B258B55350021CDD8 /* Build configuration list for PBXAggregateTarget "Copy lua.hpp" */;
 			buildPhases = (
-				26BACA66257CF90200486D28 /* ShellScript */,
+				26653B41258B55390021CDD8 /* ShellScript */,
 			);
 			dependencies = (
 			);
-			name = "Apply patches";
-			productName = Package;
+			name = "Copy lua.hpp";
+			productName = "Copy lua.hpp";
 		};
 /* End PBXAggregateTarget section */
 
@@ -58,6 +58,13 @@
 			remoteGlobalIDString = 8D57630D048677EA00EA77CD;
 			remoteInfo = QLColorCode;
 		};
+		26653B42258B55570021CDD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26653B3A258B55350021CDD8;
+			remoteInfo = "Copy lua.hpp";
+		};
 		26BAC9C4257CE96D00486D28 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
@@ -71,13 +78,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 26BAC9BC257CE93200486D28;
 			remoteInfo = lua;
-		};
-		26BACA6E257CF94500486D28 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 26BACA63257CF90200486D28;
-			remoteInfo = "Apply patches";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -113,16 +113,6 @@
 		EACE3C6924E8D93800B58A51 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		EAE9D2CB169E2B3500A67B2F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		8D576313048677EA00EA77CD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		089C166AFE841209C02AAC07 /* QLColorCode */ = {
@@ -188,7 +178,7 @@
 /* Begin PBXLegacyTarget section */
 		26BAC9AB257CE89900486D28 /* highlight */ = {
 			isa = PBXLegacyTarget;
-			buildArgumentsString = "-j9 cli";
+			buildArgumentsString = "-j9 cli LUA_LIBS=../../lua/liblua.a 'CXX_COMPILE=clang++ -Wall -O2 -std=c++11 -D_FILE_OFFSET_BITS=64 -c -I /opt/local/include -I /usr/local/include -I ./include -I ../../lua'";
 			buildConfigurationList = 26BAC9AC257CE89900486D28 /* Build configuration list for PBXLegacyTarget "highlight" */;
 			buildPhases = (
 			);
@@ -196,6 +186,7 @@
 			buildWorkingDirectory = hl/highlight;
 			dependencies = (
 				26BAC9C7257CE97100486D28 /* PBXTargetDependency */,
+				26653B43258B55570021CDD8 /* PBXTargetDependency */,
 			);
 			name = highlight;
 			passBuildSettingsInEnvironment = 1;
@@ -203,14 +194,13 @@
 		};
 		26BAC9BC257CE93200486D28 /* lua */ = {
 			isa = PBXLegacyTarget;
-			buildArgumentsString = "-j9 $(ACTION)";
+			buildArgumentsString = "-j9 $(ACTION) MYCFLAGS=-std=c99 MYLDFLAGS= MYLIBS=-ldl";
 			buildConfigurationList = 26BAC9BD257CE93200486D28 /* Build configuration list for PBXLegacyTarget "lua" */;
 			buildPhases = (
 			);
 			buildToolPath = /usr/bin/make;
 			buildWorkingDirectory = hl/lua;
 			dependencies = (
-				26BACA6F257CF94500486D28 /* PBXTargetDependency */,
 			);
 			name = lua;
 			passBuildSettingsInEnvironment = 1;
@@ -226,7 +216,6 @@
 				8D57630E048677EA00EA77CD /* Headers */,
 				8D57630F048677EA00EA77CD /* Resources */,
 				8D576311048677EA00EA77CD /* Sources */,
-				8D576313048677EA00EA77CD /* Frameworks */,
 				0ECBBA6F0CFCA39E00416538 /* Copy to Library */,
 				0E1280381061C3EA0078EC05 /* Reset quicklookd */,
 			);
@@ -250,6 +239,9 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
+					26653B3A258B55350021CDD8 = {
+						CreatedOnToolsVersion = 12.3;
+					};
 					26BAC9AB257CE89900486D28 = {
 						CreatedOnToolsVersion = 12.2;
 					};
@@ -274,7 +266,7 @@
 				0E0E34E90D0097020086C1E6 /* Package */,
 				26BAC9AB257CE89900486D28 /* highlight */,
 				26BAC9BC257CE93200486D28 /* lua */,
-				26BACA63257CF90200486D28 /* Apply patches */,
+				26653B3A258B55350021CDD8 /* Copy lua.hpp */,
 			);
 		};
 /* End PBXProject section */
@@ -327,18 +319,22 @@
 			shellScript = "qlmanage -r\n";
 			showEnvVarsInLog = 0;
 		};
-		26BACA66257CF90200486D28 /* ShellScript */ = {
+		26653B41258B55390021CDD8 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
 			inputPaths = (
+			);
+			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd hl\n./apply-patches.sh\n";
+			shellScript = "cp hl/lua.hpp hl/lua/lua.hpp\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -362,6 +358,11 @@
 			target = 8D57630D048677EA00EA77CD /* QLColorCode */;
 			targetProxy = 0E0E34ED0D0097280086C1E6 /* PBXContainerItemProxy */;
 		};
+		26653B43258B55570021CDD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26653B3A258B55350021CDD8 /* Copy lua.hpp */;
+			targetProxy = 26653B42258B55570021CDD8 /* PBXContainerItemProxy */;
+		};
 		26BAC9C5257CE96D00486D28 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 26BAC9AB257CE89900486D28 /* highlight */;
@@ -371,11 +372,6 @@
 			isa = PBXTargetDependency;
 			target = 26BAC9BC257CE93200486D28 /* lua */;
 			targetProxy = 26BAC9C6257CE97100486D28 /* PBXContainerItemProxy */;
-		};
-		26BACA6F257CF94500486D28 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 26BACA63257CF90200486D28 /* Apply patches */;
-			targetProxy = 26BACA6E257CF94500486D28 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -405,6 +401,24 @@
 				PRODUCT_NAME = Package;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		26653B3C258B55350021CDD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EU5R2QY9HJ;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		26653B3D258B55350021CDD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EU5R2QY9HJ;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -561,36 +575,6 @@
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		26BACA68257CF90200486D28 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INFOPLIST_FILE = "Package copy-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				RUN_CLANG_STATIC_ANALYZER = YES;
-			};
-			name = Debug;
-		};
-		26BACA69257CF90200486D28 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INFOPLIST_FILE = "Package copy-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				RUN_CLANG_STATIC_ANALYZER = YES;
-				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
@@ -762,6 +746,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		26653B3B258B55350021CDD8 /* Build configuration list for PBXAggregateTarget "Copy lua.hpp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26653B3C258B55350021CDD8 /* Debug */,
+				26653B3D258B55350021CDD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		26BAC9AC257CE89900486D28 /* Build configuration list for PBXLegacyTarget "highlight" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -776,15 +769,6 @@
 			buildConfigurations = (
 				26BAC9BE257CE93200486D28 /* Debug */,
 				26BAC9BF257CE93200486D28 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		26BACA67257CF90200486D28 /* Build configuration list for PBXAggregateTarget "Apply patches" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				26BACA68257CF90200486D28 /* Debug */,
-				26BACA69257CF90200486D28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
