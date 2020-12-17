@@ -15,6 +15,10 @@ Alternatively, if you use [Homebrew Cask](https://github.com/caskroom/homebrew-c
 
 **To build the project, you must have Boost headers on your system in `/opt/local/include` or `/usr/local/include`.**
 
+Note that the build may fail if you have a version of `liblua.a` in a library
+path such as `/usr/local/lib`. In that case, temporarily uninstall Lua using
+the appropriate package manager.
+
 ## Settings
 
 If you want to configure `QLColorCode`, there are several `defaults` commands that could be useful:
