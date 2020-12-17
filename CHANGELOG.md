@@ -10,6 +10,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/fr/1.0.0/) a
 
 - NOTHING
 
+### Changed
+
+- Compilation of `highlight`/`lua` (thanks @Tatsh).
+
 ## [4.0.3] — 2020-12-17
 
 ### Added
@@ -63,7 +67,7 @@ Thanks to @tatsh for his amazing work!**
 
 - `kts` (kotlin) support.
 - `xsh` support.
-- `pyc` support (decompilation with `uncompyle6` [has to be in `/usr/local/bin`])
+- `pyc` support (decompilation with `uncompyle6` [has to be in `/usr/local/bin`]).
 - `rst` support.
 - `perl` support.
 - `bats` (Bash Automated Testing System) support.
