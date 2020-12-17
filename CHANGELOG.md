@@ -8,7 +8,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/fr/1.0.0/) a
 
 ## [Unreleased]
 
-- NOTHING
+### Added
+
+- `xsl` support.
 
 ## [4.0.2] — 2020-12-16
 
