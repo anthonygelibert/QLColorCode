@@ -11,7 +11,7 @@ To install the plug-in, just drag it to `~/Library/QuickLook`. You may need to c
 exist.
 
 Alternatively, if you use [Homebrew Cask](https://github.com/caskroom/homebrew-cask), install with
-`brew cask install qlcolorcode`. Also available on [MacPorts](https://www.macports.org): `port install QLColorCode`.
+`brew install --cask qlcolorcode`. Also available on [MacPorts](https://www.macports.org): `port install QLColorCode`.
 
 **To build the project, you must have Boost headers on your system in `/opt/local/include` or `/usr/local/include`.**
 
