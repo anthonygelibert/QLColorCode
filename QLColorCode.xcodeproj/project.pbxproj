@@ -379,28 +379,16 @@
 		0E0E34EA0D0097020086C1E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				PRODUCT_NAME = Package;
-				RUN_CLANG_STATIC_ANALYZER = YES;
+				PRODUCT_NAME = QLColorCode;
 			};
 			name = Debug;
 		};
 		0E0E34EB0D0097020086C1E6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				PRODUCT_NAME = Package;
-				RUN_CLANG_STATIC_ANALYZER = YES;
-				ZERO_LINK = NO;
+				PRODUCT_NAME = QLColorCode;
 			};
 			name = Release;
 		};
