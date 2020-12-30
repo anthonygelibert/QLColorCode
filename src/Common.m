@@ -56,11 +56,11 @@ NSString *pathOfURL(CFURLRef url)
     return targetCFS;
 }
 
+
 NSData *colorizeURL(CFBundleRef bundle, CFURLRef url, int *status, int thumbnail)
 {
     NSData *output = NULL;
     CFURLRef rsrcDirURL = CFBundleCopyResourcesDirectoryURL(bundle);
-    //n8log(@"rsrcDirURL = %@", CFURLGetString(rsrcDirURL));
     NSString *rsrcEsc = pathOfURL(rsrcDirURL);
     CFRelease(rsrcDirURL);
     n8log(@"url = %@", url);
@@ -88,6 +88,7 @@ NSData *colorizeURL(CFBundleRef bundle, CFURLRef url, int *status, int thumbnail
                                    @"", @"maxFileSize",
                                    @"UTF-8", @"textEncoding",
                                    @"UTF-8", @"webkitTextEncoding", nil]];
+
 
     [env addEntriesFromDictionary:[defaults persistentDomainForName:myDomain]];
 
