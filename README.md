@@ -51,7 +51,7 @@ zSetting any extra command-line flags for Highlight (see below):
 
     defaults write org.n8gray.QLColorCode extraHLFlags '-l -W'
 
-Here are some useful 'highlight' command-line flags (from the man page):
+Here are some useful 'highlight' command-line flags (from the main page):
 
        -F, --reformat=<style>
               reformat output in given style.   <style>=[ansi,  gnu,  kr,
