@@ -194,7 +194,7 @@
 		};
 		26BAC9BC257CE93200486D28 /* lua */ = {
 			isa = PBXLegacyTarget;
-			buildArgumentsString = "-j9 $(ACTION) MYCFLAGS=-std=c99 MYLDFLAGS= MYLIBS=-ldl";
+			buildArgumentsString = "-j9 $(ACTION) CFLAGS=\"-Wall -O2 -std=c99 -fno-stack-protector -fno-common\" MYLDFLAGS= MYLIBS=-ldl";
 			buildConfigurationList = 26BAC9BD257CE93200486D28 /* Build configuration list for PBXLegacyTarget "lua" */;
 			buildPhases = (
 			);
