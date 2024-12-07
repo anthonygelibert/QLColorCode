@@ -178,7 +178,7 @@
 /* Begin PBXLegacyTarget section */
 		26BAC9AB257CE89900486D28 /* highlight */ = {
 			isa = PBXLegacyTarget;
-			buildArgumentsString = "-j9 cli LUA_LIBS=../../lua/liblua.a 'CXX_COMPILE=clang++ -Wall -O2 -std=c++11 -D_FILE_OFFSET_BITS=64 -c -I ../../lua -I /opt/local/include -I /usr/local/include -I ./include'";
+			buildArgumentsString = "-j9 cli LUA_LIBS=../../lua/liblua.a 'CXX_COMPILE=clang++ -Wall -O2 -std=c++11 -D_FILE_OFFSET_BITS=64 -c -I ../../lua -I /opt/homebrew/include -I /opt/local/include -I /usr/local/include -I ./include -arch arm64 -arch x86_64' LDFLAGS='-ldl -arch arm64 -arch x86_64'";
 			buildConfigurationList = 26BAC9AC257CE89900486D28 /* Build configuration list for PBXLegacyTarget "highlight" */;
 			buildPhases = (
 			);
@@ -194,7 +194,7 @@
 		};
 		26BAC9BC257CE93200486D28 /* lua */ = {
 			isa = PBXLegacyTarget;
-			buildArgumentsString = "-j9 $(ACTION) MYCFLAGS=-std=c99 MYLDFLAGS= MYLIBS=-ldl";
+			buildArgumentsString = "-j9 $(ACTION) CFLAGS=\"-Wall -O2 -std=c99 -fno-stack-protector -fno-common -arch arm64 -arch x86_64\" MYLDFLAGS= MYLIBS=-ldl";
 			buildConfigurationList = 26BAC9BD257CE93200486D28 /* Build configuration list for PBXLegacyTarget "lua" */;
 			buildPhases = (
 			);
@@ -571,9 +571,9 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = "4.1.1+dev";
+				CURRENT_PROJECT_VERSION = "4.1.2+m1";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = "4.1.1+dev";
+				MARKETING_VERSION = "4.1.2+m1";
 				OTHER_CFLAGS = "-DDEBUG";
 			};
 			name = Debug;
@@ -583,9 +583,9 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = "4.1.1+dev";
+				CURRENT_PROJECT_VERSION = "4.1.2+m1";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = "4.1.1+dev";
+				MARKETING_VERSION = "4.1.2+m1";
 			};
 			name = Release;
 		};
@@ -622,7 +622,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES_AGGRESSIVE;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = "4.1.1+dev";
+				CURRENT_PROJECT_VERSION = "4.1.2+m1";
 				DEAD_CODE_STRIPPING = YES;
 				DSTROOT = "/export/tmp/$(PROJECT_NAME).dst";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -689,7 +689,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES_AGGRESSIVE;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CURRENT_PROJECT_VERSION = "4.1.1+dev";
+				CURRENT_PROJECT_VERSION = "4.1.2+m1";
 				DEAD_CODE_STRIPPING = YES;
 				DSTROOT = "/export/tmp/$(PROJECT_NAME).dst";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
